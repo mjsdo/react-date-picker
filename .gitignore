@@ -1,0 +1,9 @@
+*.iml
+.idea
+.tscache
+.DS_Store
+node_modules/
+dist/
+config/
+test/typescript/axios.js*
+sauce_connect.log

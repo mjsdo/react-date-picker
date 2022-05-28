@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "jsx": "react-jsx",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "allowJs": true,
+    "checkJs": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "typeRoots": ["index.d.ts", "node_modules/@types"],
+    "declaration": true
+  },
+  // "include": ["./src/**/*"],
+  "include": ["src/lib"],
+
+  "exclude": ["node_modules", "webpack", "dist"]
+}

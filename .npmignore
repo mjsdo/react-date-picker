@@ -1,0 +1,10 @@
+**/.*
+*.iml
+node_modules/
+typings/
+config/
+public/
+src/
+webpack.*.js
+sauce_connect.log
+tsconfig.json

@@ -1,0 +1,100 @@
+{
+  "name": "@bcad1591/rdptests",
+  "private": false,
+  "version": "0.0.1",
+  "description": "React date picker",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "browser": "./browser/specific/main.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcad1591/react-date-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bcad1591/react-date-picker/issues"
+  },
+  "keywords": [
+    "react"
+  ],
+  "contributors": [
+    "bcad1591 <bcad1591@gmail.com>",
+    "soralee2821"
+  ],
+  "homepage": "https://github.com/bcad1591/react-date-picker#readme",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack serve --env NODE_ENV=development",
+    "prod": "webpack serve --env NODE_ENV=production",
+    "build": "webpack --env NODE_ENV=production",
+    "build:publish": "rimraf dist && mkdir dist && tsc --project tsconfig.json",
+    "p": "npm publish --access=public"
+  },
+  "dependencies": {
+    "date-fns": "^2.28.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
+    "@types/node": "^17.0.35",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "@types/styled-components": "^5.1.25",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-styled-components": "^2.0.7",
+    "core-js": "^3.22.6",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "module-alias": "^2.2.2",
+    "prettier": "2.6.2",
+    "react-refresh": "^0.13.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.1",
+    "ts-loader": "^9.3.0",
+    "ttypescript": "^1.5.13",
+    "typescript": "^4.6.4",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "peerDependencies": {
+    "date-fns": "^2.28.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "styled-components": "^5.3.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
