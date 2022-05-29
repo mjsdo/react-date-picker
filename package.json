@@ -1,7 +1,7 @@
 {
-  "name": "@bcad1591/rdptests",
+  "name": "@bcad1591/react-date-picker",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "React date picker",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,7 +22,7 @@
   ],
   "contributors": [
     "bcad1591 <bcad1591@gmail.com>",
-    "soralee2821"
+    "soralee2821 <sora2821@gmail.com>"
   ],
   "homepage": "https://github.com/bcad1591/react-date-picker#readme",
   "license": "MIT",
