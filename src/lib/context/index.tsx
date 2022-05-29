@@ -10,10 +10,10 @@ export type PickedDateUnits = {
   firstPickedDateUnit: PickedDateUnit | null;
   secondPickedDateUnit: PickedDateUnit | null;
 };
-type PickedDatesDispatch = React.Dispatch<React.SetStateAction<PickedDateUnits>>;
+type PickedDateUnitsDispatch = React.Dispatch<React.SetStateAction<PickedDateUnits>>;
 
 const PickedDateUnitsContext = createContext<PickedDateUnits | null>(null);
-const PickedDateUnitsDispatchContext = createContext<PickedDatesDispatch | null>(null);
+const PickedDateUnitsDispatchContext = createContext<PickedDateUnitsDispatch | null>(null);
 
 export function DatePickerProvider({ children }: { children: React.ReactNode }) {
   const [pickedDateUnits, setPickedDateUnits] = useState<PickedDateUnits>({
@@ -30,7 +30,7 @@ export function DatePickerProvider({ children }: { children: React.ReactNode }) 
   );
 }
 
-export const useDatePick = (): [PickedDateUnits, PickedDatesDispatch] => {
+export const useDatePick = (): [PickedDateUnits, PickedDateUnitsDispatch] => {
   const pickedDateUnits = useContext(PickedDateUnitsContext);
   const setPickedDateUnits = useContext(PickedDateUnitsDispatchContext);
 
@@ -41,6 +41,8 @@ export const useDatePick = (): [PickedDateUnits, PickedDatesDispatch] => {
   return [pickedDateUnits, setPickedDateUnits];
 };
 
+// TODO: Date객체도 반환하도록 변경하기.
+// TODO: Setter제공하지 않도록 고려하기.
 export const useDatePickGetter = () => {
   const pickedDateUnits = useContext(PickedDateUnitsContext);
 
