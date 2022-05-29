@@ -13,7 +13,7 @@ interface Props {
 export const YearMonthContext = createContext<number[]>([0, 0]);
 
 function MonthTable({ year, month }: Props) {
-  const days = getMonthData(year, month);
+  const days = useMemo(() => getMonthData(year, month), [year, month]);
   const value = useMemo(() => [year, month], [year, month]);
 
   return (
