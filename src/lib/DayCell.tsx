@@ -48,7 +48,14 @@ function DayCell({ day }: Props) {
     >
       {day && (
         <S.Cell
+          tabIndex={0}
           onClick={onClickDayCell}
+          onKeyUp={(e) => {
+            if (e.key !== 'Enter' || isPreviousDay) {
+              return;
+            }
+            onClickDayCell();
+          }}
           isSelected={isSelected}
           disabled={isPreviousDaysDisabled && isPreviousDay}
         >
