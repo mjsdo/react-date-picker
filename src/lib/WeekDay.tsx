@@ -3,17 +3,15 @@ import styled from 'styled-components';
 
 import theme from './styles/theme';
 
+const weekday = ['일', '월', '화', '수', '목', '금', '토'];
+
 function WeekDay() {
   return (
     <S.WeekDay>
       <S.Row>
-        <S.Cell>일</S.Cell>
-        <S.Cell>월</S.Cell>
-        <S.Cell>화</S.Cell>
-        <S.Cell>수</S.Cell>
-        <S.Cell>목</S.Cell>
-        <S.Cell>금</S.Cell>
-        <S.Cell>토</S.Cell>
+        {weekday.map((day) => (
+          <S.Cell key={day}>{day}</S.Cell>
+        ))}
       </S.Row>
     </S.WeekDay>
   );
