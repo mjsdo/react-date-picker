@@ -40,6 +40,14 @@ function DayCell({ day }: Props) {
   const isPreviousDaysDisabled = useContext(DisablePreviousDaysContext);
   const isPreviousDay = checkIsPreviousDay({ year, month, day });
 
+  const onKeyUpDayCell = (e: React.KeyboardEvent<HTMLDivElement>): void => {
+    if (e.key !== 'Enter') {
+      return;
+    }
+
+    onClickDayCell();
+  };
+
   return (
     <S.CellLayer
       isBetweenPickedDates={!!day && isBetweenPickedDates}
@@ -48,14 +56,9 @@ function DayCell({ day }: Props) {
     >
       {day && (
         <S.Cell
-          tabIndex={0}
+          tabIndex={isPreviousDay ? undefined : 0}
           onClick={onClickDayCell}
-          onKeyUp={(e) => {
-            if (e.key !== 'Enter' || isPreviousDay) {
-              return;
-            }
-            onClickDayCell();
-          }}
+          onKeyUp={onKeyUpDayCell}
           isSelected={isSelected}
           disabled={isPreviousDaysDisabled && isPreviousDay}
         >
