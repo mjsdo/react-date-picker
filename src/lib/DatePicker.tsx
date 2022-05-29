@@ -64,7 +64,7 @@ export function DatePicker({ disablePreviousDays = false }: Props) {
 
 const S = {
   DatePickerLayer: styled.div`
-    min-width: 800px !important;
+    min-width: 930px !important;
     position: relative !important;
     display: inline-block !important;
     font-size: 12px !important;
