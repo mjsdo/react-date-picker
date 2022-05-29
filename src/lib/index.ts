@@ -1,2 +1,2 @@
-export { DatePickerProvider, useDatePick, useDatePickGetter, useDatePickSetter } from './context';
+export { DatePickerProvider, useDatePickGetter, useDatePickReset } from './context';
 export { DatePicker } from './DatePicker';
