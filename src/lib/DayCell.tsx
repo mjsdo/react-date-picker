@@ -1,3 +1,4 @@
+import { startOfDay } from 'date-fns';
 import React, { memo, useContext } from 'react';
 import styled from 'styled-components';
 
@@ -23,7 +24,7 @@ const checkIsPreviousDay = ({ year, month, day }: CheckIsPreviousDayInput) => {
   }
 
   const currentCellDate = new Date(year, month - 1, day);
-  const today = new Date();
+  const today = startOfDay(new Date());
 
   return today > currentCellDate;
 };
