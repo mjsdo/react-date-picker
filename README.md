@@ -5,10 +5,9 @@ Airbnb style date picker
 ## Installation
 
 ```bash
-$ npm i @bcad1591/react-date-picker
+npm i @bcad1591/react-date-picker
 ```
 
-<br />
 
 ## Examples
 
