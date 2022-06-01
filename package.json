@@ -1,7 +1,7 @@
 {
   "name": "@bcad1591/react-date-picker",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "React date picker",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
