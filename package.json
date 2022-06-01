@@ -18,7 +18,9 @@
     "url": "https://github.com/bcad1591/react-date-picker/issues"
   },
   "keywords": [
-    "react"
+    "react",
+    "date-picker",
+    "react-date-picker"
   ],
   "contributors": [
     "bcad1591 <bcad1591@gmail.com>",

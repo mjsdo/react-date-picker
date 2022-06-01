@@ -3,7 +3,7 @@ import React, { useContext, createContext, useState } from 'react';
 export interface PickedDateUnit {
   year: number;
   month: number;
-  day: number | false;
+  day: number;
 }
 
 export type PickedDateUnits = {
@@ -57,12 +57,12 @@ export const useDatePickGetter = () => {
   }
 
   const { firstPickedDateUnit, secondPickedDateUnit } = pickedDateUnits;
-  const pickedDate = {
+  const pickedDates = {
     firstPickedDate: unitToDateObj(firstPickedDateUnit),
     secondPickedDate: unitToDateObj(secondPickedDateUnit),
   };
 
-  return { pickedDateUnits, pickedDate };
+  return { pickedDateUnits, pickedDates };
 };
 
 export const useDatePickReset = () => {

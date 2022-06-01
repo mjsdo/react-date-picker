@@ -32,8 +32,14 @@ const isEqualDate: IsEqualDate = (date1, date2) => {
 
 /* **** */
 
+interface DayCellDate {
+  year: number;
+  month: number;
+  day: number | false;
+}
+
 interface UseDayCell {
-  (date: PickedDateUnit): {
+  (date: DayCellDate): {
     isSelected: boolean;
     isBetweenPickedDates: boolean;
     isFirstPickedDate: boolean;
