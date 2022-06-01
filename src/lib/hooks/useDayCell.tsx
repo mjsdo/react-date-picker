@@ -1,5 +1,4 @@
 import { isEqual } from 'date-fns';
-import { useMemo } from 'react';
 
 import { PickedDateUnit, useDatePick } from '../context';
 
