@@ -41,15 +41,13 @@ export const useDatePick = (): [PickedDateUnits, PickedDateUnitsDispatch] => {
   return [pickedDateUnits, setPickedDateUnits];
 };
 
-// TODO: Date객체도 반환하도록 변경하기.
-// TODO: Setter제공하지 않도록 고려하기. (Reset)
-// const unitToDateObj = (obj) => {
-//   if (!obj) {
-//     return null;
-//   }
-//   const { year, month, day } = obj;
-//   return new Date(year, month - 1, day);
-// };
+const unitToDateObj = (obj: null | PickedDateUnit) => {
+  if (!obj || !obj.day) {
+    return null;
+  }
+  const { year, month, day } = obj;
+  return new Date(year, month - 1, day);
+};
 
 export const useDatePickGetter = () => {
   const pickedDateUnits = useContext(PickedDateUnitsContext);
@@ -58,7 +56,13 @@ export const useDatePickGetter = () => {
     throw new Error('DatePickGetter Error');
   }
 
-  return pickedDateUnits;
+  const { firstPickedDateUnit, secondPickedDateUnit } = pickedDateUnits;
+  const pickedDate = {
+    firstPickedDate: unitToDateObj(firstPickedDateUnit),
+    secondPickedDate: unitToDateObj(secondPickedDateUnit),
+  };
+
+  return { pickedDateUnits, pickedDate };
 };
 
 export const useDatePickReset = () => {
