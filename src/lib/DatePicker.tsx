@@ -70,7 +70,6 @@ const S = {
     font-size: 12px !important;
     padding: 64px !important;
     box-shadow: 0 4px 10px rgba(51, 51, 51, 0.1), 0 0 4px rgba(51, 51, 51, 0.05);
-    margin: 10px !important;
     background-color: ${theme.color.white} !important;
     border-radius: 40px !important;
 
