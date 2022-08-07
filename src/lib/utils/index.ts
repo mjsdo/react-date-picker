@@ -71,3 +71,25 @@ export const getThisYearAndThisMonth = () => {
   const today = new Date();
   return [getYear(today), getMonth(today)];
 };
+
+export const getYearMonth = (year: number, month: number) => {
+  return new Intl.DateTimeFormat(navigator.language, { year: 'numeric', month: 'long' }).format(
+    new Date(year, month - 1),
+  );
+};
+
+export const getWeekDay = (locale: string) => {
+  if (locale.startsWith('ko')) {
+    return ['일', '월', '화', '수', '목', '금', '토'];
+  }
+
+  if (locale.startsWith('ja')) {
+    return ['日', '月', '火', '水', '木', '金', '土'];
+  }
+
+  if (locale.startsWith('zh')) {
+    return ['日', '一', '二', '三', '四', '五', '六'];
+  }
+
+  return ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+};
