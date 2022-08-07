@@ -2,7 +2,7 @@ import React, { memo, createContext, useMemo } from 'react';
 import styled from 'styled-components';
 
 import Days from './Days';
-import { getMonthData } from './utils';
+import { getMonthData, getYearMonth } from './utils';
 import Weekday from './Weekday';
 
 interface Props {
@@ -20,9 +20,7 @@ function MonthTable({ year, month }: Props) {
     <YearMonthContext.Provider value={value}>
       <S.MonthTableLayer>
         <S.Header>
-          <S.YearMonth>
-            {year}년 {month}월
-          </S.YearMonth>
+          <S.YearMonth>{getYearMonth(year, month)}</S.YearMonth>
         </S.Header>
         <S.Table>
           <Weekday />

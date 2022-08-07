@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import theme from './styles/theme';
+import { getWeekDay } from './utils';
 
-const weekday = ['일', '월', '화', '수', '목', '금', '토'];
+const weekday = getWeekDay(navigator.language);
 
 function WeekDay() {
   return (
