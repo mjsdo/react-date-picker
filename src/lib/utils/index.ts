@@ -2,6 +2,10 @@ import { endOfMonth, getDay, startOfMonth, getDate, getYear, getMonth } from 'da
 
 type MonthTableRowType = Array<number | false>;
 
+export const isBrowser = () => {
+  return typeof window !== 'undefined';
+};
+
 const getRangeArray = (start: number, end: number): number[] => {
   return Array(end - start + 1)
     .fill(undefined)
