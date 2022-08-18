@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import theme from './styles/theme';
-import { getWeekDay } from './utils';
+import { getWeekDay, isBrowser } from './utils';
 
-const weekday = getWeekDay(navigator.language);
+const language = isBrowser() ? navigator.language : 'en-US';
+
+const weekday = getWeekDay(language);
 
 function WeekDay() {
   return (

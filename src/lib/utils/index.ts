@@ -77,7 +77,8 @@ export const getThisYearAndThisMonth = () => {
 };
 
 export const getYearMonth = (year: number, month: number) => {
-  return new Intl.DateTimeFormat(navigator.language, { year: 'numeric', month: 'long' }).format(
+  const language = isBrowser() ? navigator.language : 'en-US';
+  return new Intl.DateTimeFormat(language, { year: 'numeric', month: 'long' }).format(
     new Date(year, month - 1),
   );
 };
