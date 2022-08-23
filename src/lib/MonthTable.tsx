@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Days from './Days';
 import { getMonthData, getYearMonth } from './utils';
-import Weekday from './Weekday';
+import Weekday from './WeekDay';
 
 interface Props {
   year: number;

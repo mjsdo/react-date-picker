@@ -2,6 +2,10 @@ import { endOfMonth, getDay, startOfMonth, getDate, getYear, getMonth } from 'da
 
 type MonthTableRowType = Array<number | false>;
 
+export const isBrowser = () => {
+  return typeof window !== 'undefined';
+};
+
 const getRangeArray = (start: number, end: number): number[] => {
   return Array(end - start + 1)
     .fill(undefined)
@@ -73,7 +77,8 @@ export const getThisYearAndThisMonth = () => {
 };
 
 export const getYearMonth = (year: number, month: number) => {
-  return new Intl.DateTimeFormat(navigator.language, { year: 'numeric', month: 'long' }).format(
+  const language = isBrowser() ? navigator.language : 'en-US';
+  return new Intl.DateTimeFormat(language, { year: 'numeric', month: 'long' }).format(
     new Date(year, month - 1),
   );
 };
